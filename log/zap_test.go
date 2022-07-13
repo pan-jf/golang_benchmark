@@ -6,7 +6,6 @@ import (
 	"go.uber.org/zap"
 )
 
-// 605.3 ns/op             4 B/op          0 allocs/op
 func BenchmarkZap(b *testing.B) {
 	logger, _ := zap.NewProduction()
 	b.ResetTimer()
@@ -15,7 +14,6 @@ func BenchmarkZap(b *testing.B) {
 	}
 }
 
-//  615.4 ns/op             4 B/op          0 allocs/op
 func BenchmarkZapSugar(b *testing.B) {
 	logger, _ := zap.NewProduction()
 	b.ResetTimer()

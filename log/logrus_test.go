@@ -6,7 +6,6 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-// 50959 ns/op             641 B/op         17 allocs/op
 func BenchmarkLogrus(b *testing.B) {
 	var log = logrus.New()
 	b.ResetTimer()
